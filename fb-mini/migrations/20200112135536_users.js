@@ -10,6 +10,23 @@ exports.up = async knex => knex.schema.createTable('users', table => {
     .unique()
     .notNullable()
 
+  table
+    .string('firstName')
+    .notNullable()
+
+  table
+    .string('lastName')
+    .notNullable()
+
+  table
+    .string('bio')
+
+  table
+    .string('password')
+
+  table
+    .datetime('dob')
+
   table.timestamps(true)
 })
 

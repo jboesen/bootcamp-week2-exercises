@@ -4,6 +4,7 @@
   "description": "fb-mini",
   "scripts": {
     "migrations": "npx knex -- migrate:latest",
+    "reset": "npx knex migrate:rollback && npx knex migrate:latest && npx knex seed:run",
     "rollback": "npx knex -- migrate:rollback",
     "seed": "npx knex -- seed:run",
     "test": "jest",
@@ -13,7 +14,7 @@
   "dependencies": {
     "casual": "^1.6.2",
     "dotenv": "^8.2.0",
-    "knex": "^0.21.1",
+    "knex": "^0.21.21",
     "pg": "^8.0.3"
   },
   "devDependencies": {
